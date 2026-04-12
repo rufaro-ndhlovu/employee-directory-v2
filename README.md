@@ -1,6 +1,6 @@
 # 🗂️ Company Directory v2
 
-A self-directed rebuild of [Company Directory v1](#) using a modern front-end stack. The original project was completed as part of a full-stack developer traineeship. This version was built to develop real-world experience with contemporary tools and architecture - learning each technology through the process of building the application itself.
+A self-directed rebuild of [Company Directory v1](https://rufarondhlovu.co.uk/project2/) using a modern front-end stack. The original project was completed as part of a full-stack developer traineeship. This version was built to develop real-world experience with contemporary tools and architecture - learning each technology through the process of building the application itself.
 
 > 🚧 **Status: actively in development** - core functionality is complete and the application is live.
 
