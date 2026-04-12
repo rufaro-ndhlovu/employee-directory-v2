@@ -1,0 +1,121 @@
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
+  /* Background image */
+  background-image: url("./background1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+/* Main content container */
+.form {
+  background: #081f2d !important;
+  border-radius: 20px;
+  padding: 28px 30px 28px 36px;
+  color: #fff !important;
+  position: relative;
+  box-shadow: 0 60px 120px rgba(0, 0, 0, 0.8);
+}
+
+.form::before {
+  content: "";
+  position: absolute;
+  top: 22px;
+  bottom: 22px;
+  left: 18px;
+
+  width: 3px;
+  border-radius: 3px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(111, 199, 194, 0.9),
+    rgba(111, 199, 194, 0.15)
+  );
+}
+
+.form input {
+  border-radius: 16px;
+  background-color: #fff;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+}
+
+/* Image container */
+.image {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.signInButton {
+  width: 21rem;
+  color: #fff;
+  background: linear-gradient(135deg, #6fc7c2, #a185ff);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 18px;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow:
+    0 6px 14px rgba(0, 0, 0, 0.12),
+    0 12px 28px rgba(0, 0, 0, 0.16),
+    inset 0 0 12px rgba(255, 255, 255, 0.25);
+
+  transition: 0.25s ease;
+}
+
+.signInButton:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 8px 18px rgba(0, 0, 0, 0.18),
+    0 14px 32px rgba(0, 0, 0, 0.24),
+    inset 0 0 16px rgba(255, 255, 255, 0.3);
+}
+
+.button:active {
+  transform: scale(0.97);
+}
+
+.createAccount,
+.forgotPassword {
+  margin-left: 33%;
+  color: #fff;
+  cursor: pointer;
+}
+
+.header {
+  padding-bottom: 1rem;
+  align-self: center;
+}
+
+.errors {
+  color: red;
+  font-size: 0.8rem;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 15, 22, 0.72);
+  backdrop-filter: blur(3px);
+}

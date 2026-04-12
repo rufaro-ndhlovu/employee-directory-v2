@@ -1,0 +1,156 @@
+.announcementsPage {
+  display: flex;
+  margin-left: 16rem;
+  min-height: 100vh;
+  padding: 2rem 2.5rem;
+  gap: 2rem;
+}
+
+.announcementsContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.pageHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+  border: 1px solid rgba(79, 70, 229, 0.12);
+}
+
+.pageHeader h1 {
+  font-size: clamp(1.9rem, 2vw, 2.4rem);
+  color: #132f4c;
+  margin-bottom: 0.35rem;
+}
+
+.subtitle {
+  color: #475569;
+  line-height: 1.6;
+  max-width: 44rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 9rem;
+  padding: 0.85rem 1rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(111, 199, 194, 0.18), rgba(161, 133, 255, 0.18));
+  color: #1d2939;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.formSection {
+  width: 100%;
+}
+
+.postsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.posts {
+  display: grid;
+  gap: 1rem;
+}
+
+.post {
+  position: relative;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(79, 70, 229, 0.12);
+  border-radius: 24px;
+  padding: 1.25rem;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.post:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 26px 50px rgba(15, 23, 42, 0.12);
+}
+
+.postHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.postAuthor {
+  margin: 0 0 0.25rem;
+  color: #0f172a;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.postMeta {
+  margin: 0 0 0.45rem;
+  font-size: 0.9rem;
+  color: #475569;
+}
+
+.postTitle {
+  margin: 0;
+  color: #1f2f50;
+  font-size: 1.3rem;
+  line-height: 1.25;
+}
+
+.postHeaderActions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.reactionGroup {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.postDate {
+  color: #64748b;
+  font-size: 0.92rem;
+  white-space: nowrap;
+}
+
+.postDescription {
+  color: #344054;
+  line-height: 1.7;
+  margin: 0 0 1rem;
+  font-size: 0.98rem;
+}
+
+.postActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+.emptyState {
+  padding: 2rem;
+  border-radius: 20px;
+  background: rgba(241, 245, 249, 0.86);
+  color: #475569;
+  border: 1px dashed rgba(100, 116, 139, 0.25);
+  text-align: center;
+  font-size: 1rem;
+}
+
+.postDetails {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
