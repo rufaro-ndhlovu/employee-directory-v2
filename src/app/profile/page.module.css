@@ -137,42 +137,6 @@
   color: #202840;
 }
 
-.metaRow {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.metaItem {
-  display: inline-flex;
-  flex-direction: column;
-  gap: 0.35rem;
-  padding: 0.95rem 1rem;
-  border-radius: 18px;
-  background: rgba(241, 245, 249, 0.95);
-  border: 1px solid rgba(148, 163, 184, 0.18);
-}
-
-.metaLabel {
-  color: #64748b;
-  font-size: 0.88rem;
-}
-
-.meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.85rem;
-  color: #334155;
-  margin-top: 0.5rem;
-}
-
-.meta span {
-  background: rgba(241, 245, 249, 0.95);
-  border: 1px solid rgba(148, 163, 184, 0.18);
-  border-radius: 16px;
-  padding: 0.85rem 1rem;
-}
-
 .buttonGroup {
   display: flex;
   flex-wrap: wrap;
@@ -182,33 +146,51 @@
 
 .calendarContainer {
   width: 100%;
-  min-width: 0;
   margin-top: 4rem;
 }
 
-@media (max-width: 1180px) {
+@media (max-width: 1000px) {
   .profilePage {
     flex-direction: column;
-    padding: 1.5rem;
+    margin-top: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 0;
+    margin-right: 3rem;
   }
 
-  .profileContent {
-    grid-template-columns: 1fr;
+  .profileCard {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+  }
+
+  .profileCard {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
   }
 
   .calendarContainer {
-    width: 100%;
-    min-width: unset;
-  }
-}
-
-@media (max-width: 720px) {
-  .profileCard {
-    padding: 1.25rem;
+    width: auto;
+    height: auto;
   }
 
-  .pageHeader {
-    flex-direction: column;
-    align-items: flex-start;
+  .appointmentsCard {
+    width: auto;
+    height: auto;
+  }
+
+  @media (max-width: 720px) {
+    .profileCard {
+      padding: 1rem;
+    }
+
+    .pageHeader {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 }
