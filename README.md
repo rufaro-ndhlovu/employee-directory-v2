@@ -1,8 +1,8 @@
 # 🗂️ Company Directory v2
 
-A self-directed rebuild of [Company Directory v1](#) using a modern front-end stack. The original project was completed as part of a full-stack developer traineeship. This version was built to develop real-world experience with contemporary tools and architecture — learning each technology through the process of building the application itself.
+A self-directed rebuild of [Company Directory v1](#) using a modern front-end stack. The original project was completed as part of a full-stack developer traineeship. This version was built to develop real-world experience with contemporary tools and architecture - learning each technology through the process of building the application itself.
 
-> 🚧 **Status: actively in development** — core functionality is complete and the application is live.
+> 🚧 **Status: actively in development** - core functionality is complete and the application is live.
 
 ---
 
@@ -21,7 +21,7 @@ A self-directed rebuild of [Company Directory v1](#) using a modern front-end st
 - ➕ Add a new employee using a validated form (Formik + Yup)
 - ✏️ Edit existing employee records
 - 🗑️ Delete employee records
-- 📱 Fully responsive — designed mobile-first
+- 📱 Fully responsive - designed mobile-first
 
 ---
 
@@ -80,7 +80,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 This application was built as a self-directed project after completing a full-stack developer traineeship with IT Career Switch. The original Company Directory v1 was built with PHP, JavaScript, jQuery and MariaDB. Rather than moving on to a new project, the decision was made to rebuild it from scratch using the modern front-end stack used in industry today.
 
-Each technology in this stack — React, Next.js, TypeScript, Firebase and Formik — was learned through the process of building the application, not through tutorials completed in advance. Working through real problems with unfamiliar tools produced a much deeper understanding than following guided examples.
+Each technology in this stack - React, Next.js, TypeScript, Firebase and Formik — was learned through the process of building the application, not through tutorials completed in advance. Working through real problems with unfamiliar tools produced a much deeper understanding than following guided examples.
 
 ---
 
