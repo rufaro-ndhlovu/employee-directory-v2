@@ -51,7 +51,7 @@ const EmployeeTable = ({
         </tr>
       </thead>
       <tbody>
-        {data.map((person, index) => (
+        {data.map((person: any, index: any) => (
           <tr key={person.employeeId}>
             <td className={Styles.personId}>{person.employeeId}</td>
             <td>{person.firstName}</td>

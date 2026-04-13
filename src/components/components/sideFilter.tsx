@@ -20,7 +20,7 @@ function SideFilter({ onCountryChange }: any) {
   /* Location Change Function */
 
   const handleLocationChange = async (
-    e: React.ChangeEvent<HTMLSelectElement>
+    e: React.ChangeEvent<HTMLSelectElement>,
   ) => {
     e.preventDefault();
     const locationValue = e.target.value;
@@ -36,7 +36,7 @@ function SideFilter({ onCountryChange }: any) {
   /* Department Change Function */
 
   const handleDepartmentChange = async (
-    e: React.ChangeEvent<HTMLSelectElement>
+    e: React.ChangeEvent<HTMLSelectElement>,
   ) => {
     e.preventDefault();
     const departmentValue = e.target.value;
@@ -102,9 +102,9 @@ function SideFilter({ onCountryChange }: any) {
       <ButtonComp
         text="Clear"
         style={{
-            width: "auto",
-            background: "linear-gradient(135deg, #6fc7c2, #a185ff)",
-            color: "#fff",
+          width: "auto",
+          background: "linear-gradient(135deg, #6fc7c2, #a185ff)",
+          color: "#fff",
         }}
         onClick={clearFilter}
       />

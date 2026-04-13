@@ -10,7 +10,6 @@ import SideMenu from "@/components/components/sideMenu";
 import Loading from "@/components/components/loading";
 import { FloatingLabel, Form } from "react-bootstrap";
 import ButtonComp from "@/components/components/button";
-import Calender from "../calender/page";
 
 export default function Profile() {
   const router = useRouter();
