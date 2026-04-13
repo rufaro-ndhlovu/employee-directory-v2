@@ -6,11 +6,16 @@
 }
 
 .contentContainer {
-  width: 80%;
+  width: calc(100% - 16rem);
+  min-height: 100vh;
   position: relative;
   background: transparent;
   z-index: 3;
   margin-left: 16rem;
+}
+
+.main {
+  width: 100%;
 }
 
 .sideMainContent {
@@ -27,7 +32,6 @@
 
 .contentandfilter {
   min-width: 0;
-  overflow-x: auto;
   width: 100%;
   padding: 0.5rem;
 }
@@ -37,6 +41,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   z-index: 3;
   background: rgba(255, 255, 255, 0.12);
@@ -59,11 +64,15 @@
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(22px);
   border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow:
+    0 6px 14px rgba(0, 0, 0, 0.1),
+    0 14px 28px rgba(0, 0, 0, 0.12),
+    inset 0 0 12px rgba(255, 255, 255, 0.15);
   border-radius: 18px;
   margin-top: 12px;
   width: 100%;
   overflow-x: auto;
-  display: flex;
+  -webkit-overflow-scrolling: touch;
 }
 
 .table {
@@ -71,6 +80,7 @@
   border-collapse: separate;
   border-spacing: 0;
   font-size: 15px;
+  min-width: 620px;
 }
 
 .table thead th {
@@ -83,6 +93,7 @@
   letter-spacing: 0.08em;
   font-size: 0.86rem;
   border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  white-space: nowrap;
 }
 
 .table thead th:first-child {
@@ -116,6 +127,7 @@
 .table td {
   padding: 16px 20px;
   border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+  white-space: nowrap;
 }
 
 .table tbody tr:last-child td {
@@ -159,10 +171,7 @@
 .buttonContainer {
   display: flex;
   flex-direction: row;
-}
-
-.buttonContainer button {
-  margin: 0 0.5rem;
+  gap: 0.5rem;
 }
 
 /* No results */
@@ -192,11 +201,6 @@
   .filter {
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.5rem;
-  }
-
-  .table {
-    width: 90%;
   }
 }
 
@@ -214,8 +218,7 @@
 
   .table {
     font-size: 13px;
-    width: 90%;
-    display: flex;
+    min-width: 500px;
   }
 
   .table thead th {
