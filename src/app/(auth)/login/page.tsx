@@ -62,7 +62,7 @@ export default function LoginPage() {
       <Card className={styles.form} style={{ width: "25rem" }}>
         {/*Logo */}
         <div className={styles.image}>
-          <img src="/logo3nobg.png" alt="logo" width={310} height={100} />
+          <img src="/logo3nobg.png" alt="logo" width={290} height={100} />
         </div>
         {/*Greeting Header */}
         <h4 className={styles.header}>Nice to see you again</h4>

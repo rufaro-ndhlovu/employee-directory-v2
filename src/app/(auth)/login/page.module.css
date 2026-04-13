@@ -20,7 +20,7 @@
 /* Main content container */
 .form {
   background: #081f2d !important;
-  border-radius: 20px;
+  border-radius: 20px !important;
   padding: 28px 30px 28px 36px;
   color: #fff !important;
   position: relative;
