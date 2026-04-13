@@ -161,9 +161,6 @@ export default function Profile() {
             )}
           </div>
         </div>
-        <div className={styles.calendarContainer}>
-          <Calender />
-        </div>
       </div>
       <div className={styles.rightPanel}>
         <div className={styles.appointmentsCard}>

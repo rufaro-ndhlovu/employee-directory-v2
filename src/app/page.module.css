@@ -3,16 +3,12 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: 2rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-
-  /* Background image */
+  padding: 2rem 1rem;
   background-image: url("./background1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-
   min-height: 100vh;
 }
 
@@ -20,17 +16,16 @@
 .content {
   background: #081f2d !important;
   border-radius: 20px;
-  padding: 28px 30px 28px 36px;
+  padding: 2.5rem 2rem 2rem;
   color: #fff;
   position: relative;
   box-shadow: 0 60px 120px rgba(0, 0, 0, 0.8);
-  min-height: 45vh;
-  min-width: 40vw;
+  max-width: 420px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   width: 100%;
+  border: 0.5px solid rgba(111, 199, 194, 0.2);
 }
 
 .content::before {
@@ -39,10 +34,8 @@
   top: 22px;
   bottom: 22px;
   left: 18px;
-
   width: 3px;
   border-radius: 3px;
-
   background: linear-gradient(
     180deg,
     rgba(111, 199, 194, 0.9),
@@ -55,6 +48,7 @@
   inset: 0;
   background: rgba(5, 15, 22, 0.72);
   backdrop-filter: blur(3px);
+  z-index: 0;
 }
 
 .buttonsContainer {
@@ -64,11 +58,134 @@
 }
 
 /* Logo container */
-.image {
+.logoContainer {
   display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: center;
+  margin-bottom: 0.75rem;
   width: 100%;
-  margin-bottom: 0.5rem;
+}
+
+.logo {
+  width: auto;
+  height: 70px;
+}
+
+/* Slogan */
+.slogan {
+  text-align: center;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0 0 1.25rem;
+  line-height: 1.6;
+}
+
+/* Divider */
+.divider {
+  width: 100%;
+  border: none;
+  border-top: 0.5px solid rgba(111, 199, 194, 0.15);
+  margin: 0 0 1.5rem;
+}
+
+/* Feature tiles */
+.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 1.75rem;
+}
+
+.featCard {
+  background: rgba(111, 199, 194, 0.07);
+  border: 0.5px solid rgba(111, 199, 194, 0.15);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.featIcon {
+  font-size: 16px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.featLabel {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 500;
+  margin: 0 0 2px;
+}
+
+.featDesc {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.4);
+  margin: 0;
+}
+
+/* Buttons */
+.buttonsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.btnPrimary {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #6fc7c2, #a185ff);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.btnPrimary:hover {
+  opacity: 0.9;
+}
+
+.btnSecondary {
+  width: 100%;
+  padding: 0.75rem;
+  border: 0.5px solid rgba(111, 199, 194, 0.4);
+  border-radius: 12px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 15px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btnSecondary:hover {
+  background: rgba(111, 199, 194, 0.08);
+}
+
+/* Footer text */
+.footerText {
+  text-align: center;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.3);
+  margin-top: 1.25rem;
+  margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .page {
+    padding: 1rem;
+    background-attachment: scroll;
+  }
+
+  .content {
+    padding: 2rem 1.25rem 1.5rem;
+    border-radius: 16px;
+  }
+
+  .logo {
+    height: 55px;
+  }
 }
