@@ -180,11 +180,13 @@
   height: 20rem;
 }
 
+/*─── Tablet ────────────────────────────────────────────────*/
 @media only screen and (max-width: 1100px) {
   .contentContainer {
-    width: auto;
+    width: 100%;
     margin-left: 0;
-    margin-top: 7em;
+    margin-top: 5rem;
+    padding: 1rem;
   }
 
   .sideMainContent {
@@ -193,6 +195,46 @@
 
   .filter {
     flex-direction: column;
+    align-items: flex-start;
     gap: 0.5rem;
+  }
+}
+
+/* ─── Mobile ──────────────────────────────────────────────── */
+@media only screen and (max-width: 600px) {
+  .contentContainer {
+    margin-top: 4.5rem;
+    padding: 0.75rem;
+  }
+
+  .contentandfilter {
+    padding: 0.25rem;
+  }
+
+  .table {
+    font-size: 13px;
+    min-width: 500px;
+  }
+
+  .table thead th {
+    padding: 12px 12px;
+    font-size: 0.72rem;
+  }
+
+  .table td {
+    padding: 12px 12px;
+  }
+
+  .deleteButton {
+    padding: 0.4rem 0.65rem;
+  }
+
+  .filter {
+    border-radius: 12px;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .tableContainer {
+    border-radius: 12px;
   }
 }
