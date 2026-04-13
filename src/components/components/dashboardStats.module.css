@@ -15,6 +15,7 @@
     inset 0 0 12px rgba(255, 255, 255, 0.15);
   margin-top: 12px;
   gap: 1rem;
+  box-sizing: border-box;
 }
 
 .dashContainer p {
@@ -42,6 +43,7 @@
   transition: 0.25s ease;
   flex: 1;
   min-width: 0;
+  box-sizing: border-box;
 }
 
 .employees {
@@ -95,7 +97,6 @@
   .employees,
   .departments,
   .locations {
-    width: 100%;
     flex: unset;
   }
 }
@@ -113,8 +114,8 @@
   .employees,
   .departments,
   .locations {
-    width: 100%;
     padding: 1rem 1.2rem;
     border-radius: 14px;
+    flex: unset;
   }
 }
