@@ -8,7 +8,7 @@ A self-directed rebuild of [Company Directory v1](https://rufarondhlovu.co.uk/pr
 
 ## 🌐 Live Demo
 
-[employee-directory-v2-nine.vercel.app](https://employee-directory-v2-nine.vercel.app)
+[employee-directory-v2-seven.vercel.app](https://employee-directory-v2-seven.vercel.app/)
 
 > 🔐 Authentication is required to access the application. Use the sign up form to create a test account.
 
