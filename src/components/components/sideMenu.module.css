@@ -116,6 +116,7 @@
     left: 0;
     height: auto;
     flex-direction: column;
+    max-width: 100vw;
   }
 
   .sideMenuOpen {
@@ -131,7 +132,7 @@
   }
 
   .menuLink {
-    width: 11rem;
+    width: 100%;
   }
 
   .logo {
