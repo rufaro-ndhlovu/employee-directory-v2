@@ -35,23 +35,32 @@ const formatUKDateTime = (value: any) => {
   }).format(date);
 };
 
-export default function Announcements() { 
+export default function Announcements() {
   // State to hold the list of posts
   const [posts, setPosts] = useState<any[]>([]);
   const [user, setUser] = useState<any>(null);
-  const [reactions, setReactions] = useState<Record<string, { likes: number; dislikes: number }>>({});
+  const [reactions, setReactions] = useState<
+    Record<string, { likes: number; dislikes: number }>
+  >({});
 
   const handleReaction = (postId: string, type: "likes" | "dislikes") => {
     setReactions((prev) => ({
       ...prev,
       [postId]: {
-        likes: type === "likes" ? (prev[postId]?.likes ?? 0) + 1 : prev[postId]?.likes ?? 0,
-        dislikes: type === "dislikes" ? (prev[postId]?.dislikes ?? 0) + 1 : prev[postId]?.dislikes ?? 0,
+        likes:
+          type === "likes"
+            ? (prev[postId]?.likes ?? 0) + 1
+            : (prev[postId]?.likes ?? 0),
+        dislikes:
+          type === "dislikes"
+            ? (prev[postId]?.dislikes ?? 0) + 1
+            : (prev[postId]?.dislikes ?? 0),
       },
     }));
   };
 
-  const getReactionCount = (postId: string, type: "likes" | "dislikes") => reactions[postId]?.[type] ?? 0;
+  const getReactionCount = (postId: string, type: "likes" | "dislikes") =>
+    reactions[postId]?.[type] ?? 0;
 
   // Function to load the currently logged-in user
   const loadUser = async () => {
@@ -61,33 +70,40 @@ export default function Announcements() {
   };
 
   // Function to fetch posts from the database and update the state
-    const fetchPosts = async () => {
-        try {
-            // Fetch posts data from the database
-            const postsData = await getPosts();
-            setPosts(postsData);
-            setReactions(
-              postsData.reduce((acc: Record<string, { likes: number; dislikes: number }>, post: any) => {
-                acc[post.id] = {
-                  likes: post.likes ?? 0,
-                  dislikes: post.dislikes ?? 0,
-                };
-                return acc;
-              }, {})
-            );
-        } catch (error) {
-            console.error("Error fetching posts:", error);
-        }
+  const fetchPosts = async () => {
+    try {
+      // Fetch posts data from the database
+      const postsData = await getPosts();
+      setPosts(postsData);
+      setReactions(
+        postsData.reduce(
+          (
+            acc: Record<string, { likes: number; dislikes: number }>,
+            post: any,
+          ) => {
+            acc[post.id] = {
+              likes: post.likes ?? 0,
+              dislikes: post.dislikes ?? 0,
+            };
+            return acc;
+          },
+          {},
+        ),
+      );
+    } catch (error) {
+      console.error("Error fetching posts:", error);
     }
+  };
 
-    // Fetch posts when the component mounts
-    useEffect(() => {
-      fetchPosts();
-    }, []);
+  // Fetch posts when the component mounts
+  useEffect(() => {
+    fetchPosts();
+  }, []);
 
-    useEffect(() => {
-      loadUser();
-    }, [])
+  // Load user information when the component mounts
+  useEffect(() => {
+    loadUser();
+  }, []);
 
   return (
     <div className={styles.announcementsPage}>
@@ -98,11 +114,14 @@ export default function Announcements() {
           <div>
             <h1>Announcements</h1>
             <p className={styles.subtitle}>
-              Company news, updates, and reminders are shared here for the whole team.
+              Company news, updates, and reminders are shared here for the whole
+              team.
             </p>
           </div>
 
-          <div className={styles.badge}>{posts.length} announcement{posts.length === 1 ? "" : "s"}</div>
+          <div className={styles.badge}>
+            {posts.length} announcement{posts.length === 1 ? "" : "s"}
+          </div>
         </section>
 
         <section className={styles.formSection}>
@@ -116,24 +135,32 @@ export default function Announcements() {
                 <article key={post.id} className={styles.post}>
                   <div className={styles.postHeader}>
                     <div>
-                      <p className={styles.postMeta}>Posted by {post.userFullName}</p>
+                      <p className={styles.postMeta}>
+                        Posted by {post.userFullName}
+                      </p>
                       <h3 className={styles.postTitle}>{post.postTitle}</h3>
                     </div>
                     <div className={styles.postHeaderActions}>
-                      <span className={styles.postDate}>{formatUKDateTime(post.date)}</span>
+                      <span className={styles.postDate}>
+                        {formatUKDateTime(post.date)}
+                      </span>
                       <ButtonComp
                         text="Edit"
                         style={{
                           width: "auto",
                           color: "#fff",
-                          background: "linear-gradient(135deg, #6fc7c2, #a185ff)",
+                          background:
+                            "linear-gradient(135deg, #6fc7c2, #a185ff)",
                         }}
                         onClick={() => {}}
                       />
                     </div>
                   </div>
 
-                  <p className={styles.postDescription}>{post.postDescription || "No details available for this announcement."}</p>
+                  <p className={styles.postDescription}>
+                    {post.postDescription ||
+                      "No details available for this announcement."}
+                  </p>
 
                   <div className={styles.postActions}>
                     <div className={styles.reactionGroup}>
@@ -142,7 +169,8 @@ export default function Announcements() {
                         style={{
                           width: "auto",
                           color: "#fff",
-                          background: "linear-gradient(135deg, #6fc7c2, #a185ff)",
+                          background:
+                            "linear-gradient(135deg, #6fc7c2, #a185ff)",
                         }}
                         onClick={() => handleReaction(post.id, "likes")}
                       />
@@ -151,7 +179,8 @@ export default function Announcements() {
                         style={{
                           width: "auto",
                           color: "#fff",
-                          background: "linear-gradient(135deg, #ff7a7a, #ff4e4e)",
+                          background:
+                            "linear-gradient(135deg, #ff7a7a, #ff4e4e)",
                         }}
                         onClick={() => handleReaction(post.id, "dislikes")}
                       />
@@ -162,7 +191,8 @@ export default function Announcements() {
             </div>
           ) : (
             <div className={styles.emptyState}>
-              No announcements yet. Use the form above to share news with the team.
+              No announcements yet. Use the form above to share news with the
+              team.
             </div>
           )}
         </section>

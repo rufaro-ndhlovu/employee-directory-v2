@@ -185,7 +185,6 @@
 @media (min-width: 1100px) {
   .contentContainer {
     margin-left: 16rem;
-    width: calc(100% - 16rem);
   }
 }
 
@@ -233,6 +232,7 @@
   .filter {
     border-radius: 12px;
     padding: 0.5rem 0.75rem;
+    flex-direction: row;
   }
 
   .tableContainer {
