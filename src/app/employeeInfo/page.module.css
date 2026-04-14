@@ -2,27 +2,23 @@
   height: auto;
   position: relative;
   z-index: 3;
-  width: auto;
+  width: 100%;
 }
 
 .contentContainer {
-  width: calc(100% - 16rem);
+  width: 83%;
   min-height: 100vh;
   position: relative;
   background: transparent;
   z-index: 3;
   margin-left: 16rem;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  padding: 0 1rem 0 1rem;
 }
 
 .main {
   width: 100%;
-}
-
-.sideMainContent {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
 }
 
 .mainContent {
@@ -31,9 +27,7 @@
 }
 
 .contentandfilter {
-  min-width: 0;
   width: 100%;
-  padding: 0.5rem;
 }
 
 /* Side filter container */
@@ -42,6 +36,8 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
   width: 100%;
   z-index: 3;
   background: rgba(255, 255, 255, 0.12);
@@ -55,6 +51,7 @@
     inset 0 0 12px rgba(255, 255, 255, 0.15);
   margin-top: 12px;
   padding: 0.5rem 0.9rem;
+  box-sizing: border-box;
 }
 
 /* Table container  */
@@ -70,6 +67,7 @@
     inset 0 0 12px rgba(255, 255, 255, 0.15);
   border-radius: 18px;
   margin-top: 12px;
+  box-sizing: border-box;
   width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
@@ -80,7 +78,7 @@
   border-collapse: separate;
   border-spacing: 0;
   font-size: 15px;
-  min-width: 620px;
+  min-width: 700px;
 }
 
 .table thead th {
@@ -190,12 +188,6 @@
     width: 100%;
     margin-left: 0;
     margin-top: 5rem;
-    padding: 1rem;
-  }
-
-  .sideMainContent {
-    display: flex;
-    flex-direction: column;
   }
 
   .filter {
@@ -207,9 +199,7 @@
 /* ─── Mobile ──────────────────────────────────────────────── */
 @media only screen and (max-width: 700px) {
   .contentContainer {
-    margin-top: 4.5rem;
-    padding: 0.75rem;
-    width: 90%;
+    margin-top: 5rem;
   }
 
   .contentandfilter {
@@ -218,7 +208,6 @@
 
   .table {
     font-size: 13px;
-    min-width: 500px;
   }
 
   .table thead th {
@@ -227,7 +216,7 @@
   }
 
   .table td {
-    padding: 12px 12px;
+    padding: 12px;
   }
 
   .deleteButton {
