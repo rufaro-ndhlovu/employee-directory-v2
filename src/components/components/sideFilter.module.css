@@ -1,19 +1,17 @@
 .tableData {
-    border: none;
-    background: none;
-    padding: 0.8rem;
+  border: none;
+  background: none;
+  padding: 0.8rem;
 }
 
 .dropdown {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 1rem;
-    width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+  width: auto;
 }
 
 .dropdown select {
-    border-radius: 18px;;
+  border-radius: 18px;
 }
-
-

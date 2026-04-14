@@ -6,13 +6,12 @@
 }
 
 .contentContainer {
-  width: 83%;
+  width: 100%;
   min-height: 100vh;
   position: relative;
   background: transparent;
   z-index: 3;
-  margin-left: 16rem;
-  box-sizing: border-box;
+  margin-left: 0;
   overflow-x: hidden;
   padding: 0 1rem 0 1rem;
 }
@@ -75,10 +74,9 @@
 
 .table {
   width: 100%;
-  border-collapse: separate;
+  border-collapse: collapse;
   border-spacing: 0;
   font-size: 15px;
-  min-width: 700px;
 }
 
 .table thead th {
@@ -170,6 +168,7 @@
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
+  width: 100%;
 }
 
 /* No results */
@@ -183,9 +182,16 @@
 }
 
 /*─── Tablet ────────────────────────────────────────────────*/
+@media (min-width: 1100px) {
+  .contentContainer {
+    margin-left: 16rem;
+    width: calc(100% - 16rem);
+  }
+}
+
 @media only screen and (max-width: 1100px) {
   .contentContainer {
-    width: 100%;
+    width: 99vw;
     margin-left: 0;
     margin-top: 5rem;
   }
@@ -200,6 +206,7 @@
 @media only screen and (max-width: 700px) {
   .contentContainer {
     margin-top: 5rem;
+    margin-left: 0;
   }
 
   .contentandfilter {
