@@ -33,7 +33,7 @@
   gap: 1.5rem;
   flex: 0 0 26rem;
   min-width: 26rem;
-  width: 100%;
+  width: 90%;
 }
 
 .appointmentsCard {
@@ -146,15 +146,10 @@
   gap: 1rem;
 }
 
-.calendarContainer {
-  width: 100%;
-  margin-top: 4rem;
-}
-
 @media (max-width: 1000px) {
   .profilePage {
     flex-direction: column;
-    margin-top: 5.5rem;
+    margin-top: 5.9rem;
     display: flex;
     align-items: center;
     margin-left: 0;
@@ -171,7 +166,7 @@
 
   .profileCard {
     display: flex;
-    width: 95%;
+    width: 90%;
     flex-direction: column;
   }
 
