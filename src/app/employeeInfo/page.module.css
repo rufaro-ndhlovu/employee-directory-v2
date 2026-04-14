@@ -6,12 +6,13 @@
 }
 
 .contentContainer {
-  width: 83%;
+  width: 100%;
+  max-width: 100%;
   min-height: 100vh;
   position: relative;
   background: transparent;
   z-index: 3;
-  margin-left: 16rem;
+  margin-left: 0;
   box-sizing: border-box;
   overflow-x: hidden;
   padding: 0 1rem 0 1rem;
@@ -78,7 +79,6 @@
   border-collapse: separate;
   border-spacing: 0;
   font-size: 15px;
-  min-width: 700px;
 }
 
 .table thead th {
@@ -183,6 +183,13 @@
 }
 
 /*─── Tablet ────────────────────────────────────────────────*/
+@media (min-width: 1100px) {
+  .contentContainer {
+    margin-left: 16rem;
+    width: calc(100% - 16rem);
+  }
+}
+
 @media only screen and (max-width: 1100px) {
   .contentContainer {
     width: 100%;
