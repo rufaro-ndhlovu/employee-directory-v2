@@ -170,4 +170,7 @@
   .logo {
     width: 45%;
   }
+
+  .listContainer {
+    flex-direction: column;
 }
