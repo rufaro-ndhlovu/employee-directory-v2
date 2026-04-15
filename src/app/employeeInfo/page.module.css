@@ -2,18 +2,18 @@
   height: auto;
   position: relative;
   z-index: 3;
-  width: 100%;
 }
 
 .contentContainer {
-  width: 100%;
   min-height: 100vh;
-  position: relative;
   background: transparent;
   z-index: 3;
   margin-left: 0;
   overflow-x: hidden;
   padding: 0 1rem 0 1rem;
+  display: flex;
+  flex-direction: row;
+  overflow-x: hidden;
 }
 
 .main {
