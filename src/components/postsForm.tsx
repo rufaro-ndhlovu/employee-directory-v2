@@ -55,6 +55,7 @@ const PostsForm = ({
               type="text"
               value={announcement}
               onChange={(e) => setAnnouncement(e.target.value)}
+              className={styles.announcementInput}
             />
           </FloatingLabel>
 
@@ -68,6 +69,7 @@ const PostsForm = ({
               as="textarea"
               value={description}
               onChange={(e) => setDescription(e.target.value)}
+              className={styles.announcementInput}
             />
           </FloatingLabel>
 

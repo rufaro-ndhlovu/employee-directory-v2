@@ -1,15 +1,14 @@
 .announcementsPage {
-  display: flex;
   margin-left: 16rem;
   padding: 1rem 1.5rem;
   gap: 2rem;
 }
 
 .announcementsContent {
-  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+  width: 100%;
 }
 
 .pageHeader {
@@ -165,11 +164,5 @@
     margin-left: 0;
     margin-top: 7rem;
     z-index: 0;
-  }
-}
-
-@media (max-width: 600px) {
-  .announcementsPage {
-    margin-top: 6.6rem;
   }
 }
