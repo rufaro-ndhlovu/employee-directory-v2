@@ -43,13 +43,18 @@
   );
 }
 
-.image {
+.imageContainer {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   width: 100%;
   margin-bottom: 0.5rem;
+}
+
+.image {
+  width: 100%;
+  height: auto;
 }
 
 .form input {
