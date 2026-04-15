@@ -78,7 +78,7 @@ export default function SignUp() {
   return (
     <div className={styles.page}>
       <div className={styles.overlay}></div>
-      <Card className={styles.form} style={{ width: "25rem" }}>
+      <Card className={styles.form}>
         <div className={styles.image}>
           <img src="/logo3nobg.png" alt="logo" width={310} height={100} />
         </div>
