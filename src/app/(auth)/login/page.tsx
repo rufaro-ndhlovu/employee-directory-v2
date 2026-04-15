@@ -59,10 +59,10 @@ export default function LoginPage() {
   return (
     <div className={styles.page}>
       <div className={styles.overlay}></div>
-      <Card className={styles.form} style={{ width: "25rem" }}>
+      <Card className={styles.form}>
         {/*Logo */}
-        <div className={styles.image}>
-          <img src="/logo3nobg.png" alt="logo" width={290} height={100} />
+        <div className={styles.imageContainer}>
+          <img src="/logo3nobg.png" alt="logo" className={styles.image} />
         </div>
         {/*Greeting Header */}
         <h4 className={styles.header}>Nice to see you again</h4>

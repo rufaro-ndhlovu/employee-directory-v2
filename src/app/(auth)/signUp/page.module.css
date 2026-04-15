@@ -43,7 +43,7 @@
   );
 }
 
-.image {
+.imageContainer {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -52,10 +52,20 @@
   margin-bottom: 0.5rem;
 }
 
+.image {
+  width: 100%;
+  height: auto;
+}
+
 .form input {
-  border-radius: 16px;
+  border-radius: 18px;
   background-color: #fff;
   color: #000 !important;
+}
+
+.roleSelect {
+  border-radius: 18px !important;
+  margin-bottom: 1rem !important;
 }
 
 .buttonContainer {

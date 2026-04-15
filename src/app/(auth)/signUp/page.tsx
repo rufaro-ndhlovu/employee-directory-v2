@@ -79,8 +79,8 @@ export default function SignUp() {
     <div className={styles.page}>
       <div className={styles.overlay}></div>
       <Card className={styles.form}>
-        <div className={styles.image}>
-          <img src="/logo3nobg.png" alt="logo" width={310} height={100} />
+        <div className={styles.imageContainer}>
+          <img src="/logo3nobg.png" alt="logo" className={styles.image} />
         </div>
 
         {/*Greeting Header */}
@@ -174,11 +174,12 @@ export default function SignUp() {
           ) : null}
 
           {/*Role*/}
-          <FloatingLabel controlId="floatingRole" label="Role" className="mb-3">
+          <FloatingLabel controlId="floatingRole" label="Role">
             <Form.Select
               name="role"
               onChange={formik.handleChange}
               value={formik.values.role}
+              className={styles.roleSelect}
             >
               <option value="">Select a role</option>
               <option value="user">User</option>
