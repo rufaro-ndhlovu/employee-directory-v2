@@ -167,6 +167,6 @@
     padding: 1.5rem;
     margin-top: 8rem;
     z-index: 0;
-    width: 100%;
+    width: 100vw;
   }
 }

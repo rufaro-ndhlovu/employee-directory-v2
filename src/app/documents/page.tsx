@@ -9,6 +9,7 @@ import SideMenu from "@/components/components/sideMenu";
 import { getUserLoggedIn } from "../../../firebase/employeeService";
 import ButtonComp from "@/components/components/button";
 
+// Utility function to format date and time in UK format
 const formatUKDateTime = (value: any) => {
   if (!value) return "";
 
@@ -107,27 +108,31 @@ export default function Announcements() {
 
   return (
     <div className={styles.announcementsPage}>
+      {/* Side menu for navigation */}
       <SideMenu />
 
       <main className={styles.announcementsContent}>
         <section className={styles.pageHeader}>
           <div>
+            {/* Header and subtitle for the announcements page */}
             <h1>Announcements</h1>
             <p className={styles.subtitle}>
               Company news, updates, and reminders are shared here for the whole
               team.
             </p>
           </div>
-
+          {/* Badge to show the number of announcements */}
           <div className={styles.badge}>
             {posts.length} announcement{posts.length === 1 ? "" : "s"}
           </div>
         </section>
 
+        {/* Section for the form to create new posts */}
         <section className={styles.formSection}>
           <PostsForm fetchPosts={fetchPosts} user={user} />
         </section>
 
+        {/* Section to display the list of posts */}
         <section className={styles.postsSection}>
           {posts.length > 0 ? (
             <div className={styles.posts}>
@@ -156,12 +161,12 @@ export default function Announcements() {
                       />
                     </div>
                   </div>
-
+                  {/* Post description with fallback text if no description is provided */}
                   <p className={styles.postDescription}>
                     {post.postDescription ||
                       "No details available for this announcement."}
                   </p>
-
+                  {/* Section for like and dislike buttons with reaction counts */}
                   <div className={styles.postActions}>
                     <div className={styles.reactionGroup}>
                       <ButtonComp
