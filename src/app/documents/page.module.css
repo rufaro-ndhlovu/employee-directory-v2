@@ -1,8 +1,7 @@
 .announcementsPage {
   display: flex;
   margin-left: 16rem;
-  min-height: 100vh;
-  padding: 2rem 2.5rem;
+  padding: 1rem 1.5rem;
   gap: 2rem;
 }
 
@@ -164,9 +163,13 @@
 @media (max-width: 1000px) {
   .announcementsPage {
     margin-left: 0;
-    padding: 1.5rem;
-    margin-top: 8rem;
+    margin-top: 7rem;
     z-index: 0;
-    width: 100vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .announcementsPage {
+    margin-top: 6.6rem;
   }
 }
