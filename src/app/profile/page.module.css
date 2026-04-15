@@ -15,8 +15,6 @@
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
-  max-width: 38rem;
-  width: 100%;
 }
 
 .profileCard {
@@ -31,16 +29,13 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  flex: 0 0 26rem;
-  min-width: 26rem;
-  width: 90%;
 }
 
 .appointmentsCard {
   background: rgba(255, 255, 255, 0.96);
   border: 1px solid rgba(79, 70, 229, 0.12);
   border-radius: 28px;
-  padding: 1.25rem;
+  padding: 1rem;
   box-shadow: 0 15px 35px rgba(15, 23, 42, 0.06);
 }
 
@@ -152,6 +147,7 @@
     margin-top: 5.9rem;
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-left: 0;
   }
 
@@ -160,34 +156,30 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
     height: auto;
   }
 
   .profileCard {
     display: flex;
+    flex-direction: column;
     width: 90%;
+  }
+}
+
+@media (max-width: 600px) {
+  .profileCard {
+    padding: 1rem;
+  }
+
+  .pageHeader {
     flex-direction: column;
   }
 
-  .calendarContainer {
-    width: auto;
-    height: auto;
-  }
-
-  .appointmentsCard {
-    width: auto;
-    height: auto;
-  }
-
-  @media (max-width: 720px) {
-    .profileCard {
-      padding: 1rem;
-    }
-
-    .pageHeader {
-      flex-direction: column;
-      align-items: flex-start;
-    }
+  .leftPanel {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
   }
 }
