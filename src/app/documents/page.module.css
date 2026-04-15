@@ -2,10 +2,11 @@
   margin-left: 16rem;
   padding: 1rem 1.5rem;
   gap: 2rem;
+  display: flex;
+  overflow: hidden;
 }
 
 .announcementsContent {
-  display: flex;
   flex-direction: column;
   gap: 1.25rem;
   width: 100%;
@@ -21,12 +22,17 @@
   background: rgba(255, 255, 255, 0.96);
   box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
   border: 1px solid rgba(79, 70, 229, 0.12);
+  margin-bottom: 1rem;
 }
 
 .pageHeader h1 {
   font-size: clamp(1.9rem, 2vw, 2.4rem);
   color: #132f4c;
   margin-bottom: 0.35rem;
+}
+
+.formSection {
+  margin-bottom: 1rem;
 }
 
 .subtitle {
@@ -164,5 +170,21 @@
     margin-left: 0;
     margin-top: 7rem;
     z-index: 0;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .announcementsPage {
+    padding: 0.75rem;
+  }
+
+  .pageHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .postActions {
+    justify-content: flex-start;
   }
 }
