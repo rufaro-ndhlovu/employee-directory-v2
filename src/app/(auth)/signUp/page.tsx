@@ -174,11 +174,12 @@ export default function SignUp() {
           ) : null}
 
           {/*Role*/}
-          <FloatingLabel controlId="floatingRole" label="Role" className="mb-3">
+          <FloatingLabel controlId="floatingRole" label="Role">
             <Form.Select
               name="role"
               onChange={formik.handleChange}
               value={formik.values.role}
+              className={styles.roleSelect}
             >
               <option value="">Select a role</option>
               <option value="user">User</option>

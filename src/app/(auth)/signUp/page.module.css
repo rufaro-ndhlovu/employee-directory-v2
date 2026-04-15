@@ -53,9 +53,14 @@
 }
 
 .form input {
-  border-radius: 16px;
+  border-radius: 18px;
   background-color: #fff;
   color: #000 !important;
+}
+
+.roleSelect {
+  border-radius: 18px !important;
+  margin-bottom: 1rem !important;
 }
 
 .buttonContainer {
