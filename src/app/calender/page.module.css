@@ -30,5 +30,6 @@
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     margin-top: 10rem;
+    margin-left: 0;
   }
 }
