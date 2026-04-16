@@ -162,17 +162,7 @@
   .profileCard {
     display: flex;
     flex-direction: column;
-    width: 90%;
-  }
-}
-
-@media (max-width: 600px) {
-  .profileCard {
-    padding: 1rem;
-  }
-
-  .pageHeader {
-    flex-direction: column;
+    width: 60%;
   }
 
   .leftPanel {
@@ -181,5 +171,34 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+  }
+
+  .rightPanel {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .appointmentsCard {
+    width: 70%;
+  }
+}
+
+@media (max-width: 700px) {
+  .profileCard {
+    padding: 1rem;
+  }
+
+  .pageHeader {
+    flex-direction: column;
+  }
+
+  .profileCard {
+    width: 90%;
+  }
+
+  .appointmentsCard {
+    width: 90%;
   }
 }
