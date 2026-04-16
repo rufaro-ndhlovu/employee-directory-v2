@@ -8,9 +8,7 @@ import interactionPlugin from "@fullcalendar/interaction";
 import Styles from "./page.module.css";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import bootstrap5Plugin from "@fullcalendar/bootstrap5";
-import {
-  getEvents
-} from "../../../firebase/employeeService";
+import { getEvents } from "../../../firebase/employeeService";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import AddEvent from "@/components/components/addEvent";

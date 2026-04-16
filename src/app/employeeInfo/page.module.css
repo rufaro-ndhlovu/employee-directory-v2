@@ -192,7 +192,7 @@
   .contentContainer {
     width: 99vw;
     margin-left: 0;
-    margin-top: 5rem;
+    margin-top: 6rem;
   }
 
   .filter {
@@ -204,7 +204,7 @@
 /* ─── Mobile ──────────────────────────────────────────────── */
 @media only screen and (max-width: 700px) {
   .contentContainer {
-    margin-top: 5rem;
+    margin-top: 6.5rem;
     margin-left: 0;
   }
 
